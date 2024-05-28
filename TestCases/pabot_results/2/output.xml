@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T23:06:37.549137" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCases" source="E:\Git\Team2_OrangeHRM\Team2_OrangeHRM\TestCases">
+<suite id="s1-s1" name="Test LoginInvalid" source="E:\Git\Team2_OrangeHRM\Team2_OrangeHRM\TestCases\Test_LoginInvalid.robot">
+<test id="s1-s1-t1" name="Login to form using" line="13">
+<kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:06:40.124132" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-27T23:06:40.124132" elapsed="6.890895"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:06:47.016028" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-27T23:06:47.016028" elapsed="8.927676"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-27T23:06:55.943704" elapsed="0.074992"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-27T23:06:56.019694" elapsed="0.004000"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:06:40.124132" elapsed="15.900562"/>
+</kw>
+<kw name="validate unsuccessful login using invalid username">
+<kw name="Fill the login form" owner="LoginResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:06:56.035688" level="INFO">Typing text 'aadmin' into text field 'xpath://input[@name='username']'.</msg>
+<arg>xpath://input[@name='username']</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:06:56.033687" elapsed="0.865919"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:06:56.900612" level="INFO">Typing password into text field 'xpath://input[@type='password']'.</msg>
+<msg time="2024-05-27T23:06:57.239196" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@type='password']</arg>
+<arg>${Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:06:56.899606" elapsed="0.475165"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:06:57.374771" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<arg>xpath://button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:06:57.374771" elapsed="1.192636"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-05-27T23:06:56.031684" elapsed="2.536721"/>
+</kw>
+<kw name="verify the invalid credentials" owner="LoginResources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:06:59.033974" level="INFO">${result} = Invalid credentials</msg>
+<var>${result}</var>
+<arg>${error_msg}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:06:58.569406" elapsed="0.464568"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Invalid credentials</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-27T23:06:59.033974" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:06:58.568405" elapsed="0.466569"/>
+</kw>
+<arg>username=aadmin</arg>
+<arg>password=admin123</arg>
+<status status="PASS" start="2024-05-27T23:06:56.024694" elapsed="3.010280"/>
+</kw>
+<kw name="Close Browser Session" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-27T23:06:59.035977" elapsed="2.540943"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:06:59.034974" elapsed="2.541946"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:06:40.124132" elapsed="21.453975"/>
+</test>
+<test id="s1-s1-t2" name="Login to form using" line="13">
+<kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:07:01.584088" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-27T23:07:01.584088" elapsed="3.071473"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:07:04.656614" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-27T23:07:04.655561" elapsed="1.054993"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-27T23:07:05.710554" elapsed="3.980999"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-27T23:07:09.692558" elapsed="0.002001"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:07:01.582638" elapsed="8.111921"/>
+</kw>
+<kw name="validate unsuccessful login using invalid username">
+<kw name="Fill the login form" owner="LoginResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:07:09.698051" level="INFO">Typing text 'Admin' into text field 'xpath://input[@name='username']'.</msg>
+<arg>xpath://input[@name='username']</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:07:09.696558" elapsed="1.441210"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:07:11.138773" level="INFO">Typing password into text field 'xpath://input[@type='password']'.</msg>
+<msg time="2024-05-27T23:07:11.372834" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@type='password']</arg>
+<arg>${Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:07:11.137768" elapsed="0.476222"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:07:11.615418" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<arg>xpath://button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:07:11.613990" elapsed="2.257448"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-05-27T23:07:09.695558" elapsed="4.175880"/>
+</kw>
+<kw name="verify the invalid credentials" owner="LoginResources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:07:15.057940" level="INFO">${result} = Invalid credentials</msg>
+<var>${result}</var>
+<arg>${error_msg}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:07:13.872443" elapsed="1.185497"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Invalid credentials</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-27T23:07:15.057940" elapsed="0.005021"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:07:13.871438" elapsed="1.191523"/>
+</kw>
+<arg>username=Admin</arg>
+<arg>password=1234</arg>
+<status status="PASS" start="2024-05-27T23:07:09.694559" elapsed="5.368402"/>
+</kw>
+<kw name="Close Browser Session" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-27T23:07:15.064207" elapsed="4.021783"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:07:15.062961" elapsed="4.023029"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:07:01.578107" elapsed="17.507883"/>
+</test>
+<test id="s1-s1-t3" name="Login to form using" line="13">
+<kw name="Open the Browser with URL" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:07:19.087996" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-27T23:07:19.087996" elapsed="4.326714"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:07:23.415710" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-27T23:07:23.415710" elapsed="5.169334"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-27T23:07:28.585044" elapsed="0.099890"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-27T23:07:28.686929" elapsed="0.010785"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:07:19.087996" elapsed="9.609718"/>
+</kw>
+<kw name="validate unsuccessful login using invalid username">
+<kw name="Fill the login form" owner="LoginResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:07:28.697714" level="INFO">Typing text 'aadmin' into text field 'xpath://input[@name='username']'.</msg>
+<arg>xpath://input[@name='username']</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:07:28.697714" elapsed="1.997880"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:07:30.696604" level="INFO">Typing password into text field 'xpath://input[@type='password']'.</msg>
+<msg time="2024-05-27T23:07:30.770102" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@type='password']</arg>
+<arg>${Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:07:30.695594" elapsed="0.184022"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:07:30.880613" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<arg>xpath://button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:07:30.879616" elapsed="0.200284"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-05-27T23:07:28.697714" elapsed="2.382186"/>
+</kw>
+<kw name="verify the invalid credentials" owner="LoginResources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:07:33.238417" level="INFO">${result} = Invalid credentials</msg>
+<var>${result}</var>
+<arg>${error_msg}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:07:31.080924" elapsed="2.157493"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Invalid credentials</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-27T23:07:33.238417" elapsed="0.000505"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:07:31.080924" elapsed="2.159148"/>
+</kw>
+<arg>username=aadmin</arg>
+<arg>password=12345</arg>
+<status status="PASS" start="2024-05-27T23:07:28.697714" elapsed="4.542358"/>
+</kw>
+<kw name="Close Browser Session" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-27T23:07:33.241109" elapsed="5.156465"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:07:33.241109" elapsed="5.156465"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:07:19.087996" elapsed="19.310579"/>
+</test>
+<doc>test invalid login to login page</doc>
+<status status="PASS" start="2024-05-27T23:06:37.635456" elapsed="60.763119"/>
+</suite>
+<status status="PASS" start="2024-05-27T23:06:37.605998" elapsed="60.794745"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="Test LoginInvalid">TestCases.Test LoginInvalid</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-05-27T23:07:01.578107" level="WARN">Multiple tests with name 'Login to form using' executed in suite 'TestCases.Test LoginInvalid'.</msg>
+<msg time="2024-05-27T23:07:19.087996" level="WARN">Multiple tests with name 'Login to form using' executed in suite 'TestCases.Test LoginInvalid'.</msg>
+</errors>
+</robot>
